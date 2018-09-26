@@ -19,5 +19,5 @@ copyFiles2Project <- function(svnPath, githubPath){
   listFiles <- list.files(path = svnPath, pattern = "\\.h$")
   listFiles <- c(listFiles, list.files(path = svnPath, pattern = "\\.cpp$"))
   setwd(svnPath)
-  dataList<-lapply(listFiles, addLine, githubPath = githubPath )
+  dataList <- lapply(listFiles, addLine, githubPath = githubPath )
 }
