@@ -5,6 +5,17 @@
 
 using namespace Rcpp;
 
+// main
+int main(int argc);
+RcppExport SEXP _ForestFactory2_main(SEXP argcSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type argc(argcSEXP);
+    rcpp_result_gen = Rcpp::wrap(main(argc));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpp_hello_world
 List rcpp_hello_world();
 RcppExport SEXP _ForestFactory2_rcpp_hello_world() {
@@ -17,6 +28,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_ForestFactory2_main", (DL_FUNC) &_ForestFactory2_main, 1},
     {"_ForestFactory2_rcpp_hello_world", (DL_FUNC) &_ForestFactory2_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };

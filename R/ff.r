@@ -6,4 +6,5 @@
 
 ff<-function(data="temperate_general"){
   cat("under construction")
+  main(argc=0)
 }
