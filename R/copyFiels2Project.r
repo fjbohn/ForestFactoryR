@@ -5,8 +5,8 @@
 #' @param githubPath characterstring - githubPath
 
 
-#githubPath<-"C:/Daten/ownCloud/Projects/H2F3-Paper/ForestFactoryR/src/"
-#svnPath<-"C:/Daten/FORMIND-TRUNK/formind-model/src/"
+#githubPath <- "C:/Daten/ownCloud/Projects/H2F3-Paper/ForestFactoryR/src/"
+#svnPath <- "C:/Daten/FORMIND-TRUNK/formind-model/src/"
 
 addLine <- function(file, githubPath){
   line <- c("#include <Rcpp.h>", "using namespace Rcpp;")
@@ -21,3 +21,5 @@ copyFiles2Project <- function(svnPath, githubPath){
   setwd(svnPath)
   dataList<-lapply(listFiles, addLine, githubPath = githubPath )
 }
+
+copyFiles2Project(svnPath, githubPath)
