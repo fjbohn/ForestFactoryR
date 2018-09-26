@@ -4,7 +4,7 @@
 #' @param data characterstring - A forest parameterset; default "temperate_general", Furhter available dataset: "amazon_general"
 #' @export
 
-ff<-function(data="temperate_general"){
+ff <- function(data = "temperate_general"){
   cat("under construction")
-  main(argc=0)
+  main(argc = 0)
 }
